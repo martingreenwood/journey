@@ -1,0 +1,27 @@
+button,
+.button,
+input[type=button]
+	background: $primary
+	text-transform: uppercase
+	@include font-size(16px)
+	letter-spacing: 1px
+	@include padding(1rem, 2rem, 1rem, 2rem)
+	border-radius: 0.5rem
+	border: 2px solid $primary
+	color: white
+	cursor: pointer
+	display: inline-flex
+	transition: all 0.3s linear
+
+	&:hover
+		background: transparent
+		color: $primary
+
+
+	&.alt
+		background: $lightgrey
+		border: 2px solid $lightgrey
+
+		&:hover
+			background: transparent
+			color: $lightgrey

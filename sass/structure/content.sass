@@ -1,0 +1,139 @@
+#intro
+	background: white
+	@include padding(10rem, 0, 10rem, 0)
+
+	.container
+		max-width: 80rem
+
+		.row
+			@include content-block()
+
+			.intro-copy
+				transition: all 0.3s linear
+				opacity: 0
+				transform: translateY(3rem)
+
+				br
+					display: none
+
+					@media (min-width: $medium)
+						display: block
+
+	&.--iv
+
+		.container
+
+			.row
+
+				.intro-copy
+					opacity: 1
+					transform: translateY(0)
+
+
+#lunch
+	@include amenity-box()
+
+	.lunchbg
+		@include bleed-this-image-left("../img/lunch.jpg")
+
+	.copy
+		@include padding(3rem, 1rem, 4rem, 1rem)
+		transition: all 0.3s linear
+		opacity: 0
+		transform: translateX(3rem)
+
+		@media (min-width: $small)
+			@include padding(6rem, 8rem, 8rem, 4rem)
+
+		@include content-block()
+
+	&.--iv
+
+		.container
+
+			.row
+
+				.copy
+					opacity: 1
+					transform: translateX(0)
+
+#spa
+	@include amenity-box()
+
+	.spabg
+		@include bleed-this-image-right("../img/spa.jpg")
+
+	.copy
+		@include padding(3rem, 1rem, 4rem, 1rem)
+		transition: all 0.3s linear
+		opacity: 0
+		transform: translateX(-3rem)
+
+		@media (min-width: $small)
+			@include padding(6rem, 8rem, 8rem, 4rem)
+
+		@include content-block()
+
+	&.--iv
+
+		.container
+
+			.row
+
+				.copy
+					opacity: 1
+					transform: translateX(0)
+
+#gallery
+	@include padding(6rem, 0rem, 6rem, 0rem)
+
+	@media (min-width: $small)
+		@include padding(8rem, 8rem, 8rem, 8rem)
+
+	.container
+
+		.row
+
+			.col-xs
+				@include margin(0, 0, 3rem, 0)
+
+				&:last-of-type
+					@include margin(0, 0, 0, 0)
+
+				@media (min-width: $small)
+					@include margin(0, 0, 0, 0)
+
+			figure
+				position: relative
+				transition: all 0.3s linear
+				opacity: 0
+				transform: translateY(3rem)
+
+				img
+					width: 100%
+					height: auto
+
+				figcaption
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					background-color: rgba(0, 0, 0, 0.22)
+					display: flex
+					color: white
+					font-size: 30px
+					font-family: "PT Serif"
+					justify-content: center
+					align-items: flex-end
+					padding: 5rem 2rem
+
+	&.--iv
+
+		.container
+
+			.row
+
+				figure
+					opacity: 1
+					transform: translateY(0)
